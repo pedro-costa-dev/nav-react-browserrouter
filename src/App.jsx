@@ -1,4 +1,4 @@
-import {useState} from 'react';
+
 import Inicio from './components/Inicio';
 import Sobre from './components/Sobre';
 import { Routes, Route, Link } from 'react-router-dom';
@@ -6,8 +6,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 export default function App() {
-  const [pagina, setPagina] = useState('inicio');
-
   return (
     <> 
       <Header >
