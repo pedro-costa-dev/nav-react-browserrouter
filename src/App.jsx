@@ -9,15 +9,20 @@ export default function App() {
   const [pagina, setPagina] = useState('inicio');
 
   return (
-    <>
-        <nav style={{ marginBottom: 20 }}>
+    <> 
+      <header>  
+        <nav>
          <Link to="/">Início</Link> |{" "}
          <Link to="/sobre">Sobre</Link> |{" "}
         </nav>
+        </header>
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/sobre" element={<Sobre />} />
         </Routes>
+        <footer>
+          <p>&copy; 2023 Minha Aplicação. Todos os direitos reservados.</p>
+        </footer>
     </>
   );
 }

@@ -9,7 +9,7 @@
 
   scrollbar-gutter: stable; /* reserva o espaço da barra de rolagem vertical, evitando que o 
                             conteúdo se mova quando a barra aparece */
-                            
+
   overflow-y: scroll; /* Deixa a barra de rolagem vertical sempre a mostra, mesmo quando não 
                          há conteúdo suficiente para rolar. Isso evita que o layout "salte" quando 
                          a barra de rolagem aparece ou desaparece. */
@@ -42,16 +42,25 @@ body {
 header, footer {
   display:flex;
   align-items: center;          /* Centraliza verticalmente */
-  justify-content: space-between; /* Espaço entre elementos */
-  padding: 20px;                   /* Espaço entre elementos */
   background: var(--surface);   /* Fundo diferente do body */
   border-bottom: 1px solid #333; /* Linha sutil separando o header */
+  height: 10vh;                  /* Altura fixa para o header */
 }
+
 nav {
   display: flex; /* Organiza os botões em linha */
   align-self: center; /* Centraliza verticalmente os botões */
-  width: 60%;
+  justify-content: center; /* Centraliza horizontalmente os botões */
+  width: 50%;
   gap:40px; /* Faz o nav ocupar toda a largura disponível */
+  
+}
+
+a {
+  text-decoration: none; /* Remove o sublinhado padrão */
+  color: var(--text);     /* Usa a cor do texto definida */
+  font-weight: bold;      /* Deixa o texto em negrito */
+  font-size: 1.1em;        /* Aumenta levemente o tamanho da fonte */
 }
 
 p {
@@ -59,9 +68,7 @@ p {
   width: 60%; /* Limita a largura do texto para melhor leitura */ 
 }
 
-button {
-  margin-left: 10px; /* Espaço entre os botões */
-}
+
 
 main {
  display:flex;
