@@ -42,9 +42,11 @@ body {
 header, footer {
   display:flex;
   align-items: center;          /* Centraliza verticalmente */
+  justify-content: center; /* Espaço entre elementos */
   background: var(--surface);   /* Fundo diferente do body */
   border-bottom: 1px solid #333; /* Linha sutil separando o header */
-  height: 10vh;                  /* Altura fixa para o header */
+  height: 10vh; 
+  padding: 0 20px; /* Espaço interno para o header */
 }
 
 nav {
