@@ -3,22 +3,21 @@ import Footer from './components/Footer';
 import Inicio from './components/Inicio';
 import Sobre from './components/Sobre';
 import Header from './components/Header';
+import { Routes, Route, Link } from 'react-router-dom';
 
 export default function App() {
   const [pagina, setPagina] = useState('inicio');
 
   return (
     <>
-      <Header  >
-        <button onClick={() => setPagina('inicio')}>Inicio</button>
-        <button onClick={() => setPagina('sobre')}>Sobre</button>
-       
-      </Header >
-
-       {pagina === 'inicio' && <Inicio /> }
-       { pagina === 'sobre' && <Sobre />} 
-       
-      <Footer year="2026" companyName="Projeto Front End-Thiago" />
+        <nav style={{ marginBottom: 20 }}>
+         <Link to="/">Início</Link> |{" "}
+         <Link to="/sobre">Sobre</Link> |{" "}
+        </nav>
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/sobre" element={<Sobre />} />
+        </Routes>
     </>
   );
 }

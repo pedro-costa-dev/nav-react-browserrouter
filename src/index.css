@@ -6,6 +6,13 @@
   --text: #f5f5f5;     /* Cor principal do texto */
   --primary: #646cff;  /* Cor de destaque, como botões */
   --radius: 8px;       /* Arredondamento padrão */
+
+  scrollbar-gutter: stable; /* reserva o espaço da barra de rolagem vertical, evitando que o 
+                            conteúdo se mova quando a barra aparece */
+                            
+  overflow-y: scroll; /* Deixa a barra de rolagem vertical sempre a mostra, mesmo quando não 
+                         há conteúdo suficiente para rolar. Isso evita que o layout "salte" quando 
+                         a barra de rolagem aparece ou desaparece. */
 }
 
 /* Remove margens e preenchimentos padrão do navegador.
